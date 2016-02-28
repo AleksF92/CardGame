@@ -6,19 +6,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites"/>
-  <backgrounds name="background">
-    <background>background\bg_Stars1</background>
-    <background>background\bg_Stars2</background>
-    <background>background\bg_Stars3</background>
-    <background>background\bg_Stars4</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\c_random.gml</script>
+    <script>scripts\button_add.gml</script>
+    <script>scripts\button_click.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_Default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Game</object>
     <object>objects\Menu</object>
+    <object>objects\Button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rom_menu</room>

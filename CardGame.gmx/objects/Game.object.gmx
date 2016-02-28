@@ -28,6 +28,8 @@
             <string>///Initialize
 window_set_fullscreen(true);
 DEBUG = false;
+randomize();
+draw_set_font(fnt_Default);
 </string>
           </argument>
         </arguments>

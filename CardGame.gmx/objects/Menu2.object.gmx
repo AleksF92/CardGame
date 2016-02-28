@@ -36,25 +36,11 @@ var MAX_STARS = 300;
 for (var i = 0; i &lt; MAX_STARS; i++) {
     ds_list_add(starData, irandom(1920));                       //X
     ds_list_add(starData, irandom(1080));                       //Y
-    ds_list_add(starData, irandom_range(1, MAX_SIZE));          //R
+    ds_list_add(starData, irandom_range(1, MAX_SIZE));                 //R
     ds_list_add(starData, c_random("blue"));                    //Color
     ds_list_add(starData, random(1));                           //Alpha
     ds_list_add(starData, choose(1, -1));                       //Direction
 }
-
-//Create buttons
-var cx = room_width / 2;
-var w = 200;
-var h = 40;
-var offsetY = 10;
-var totH = h + offsetY;
-var y1 = 200;
-var y2 = y1 + totH;
-var y3 = y2 + (totH * 2);
-
-button_add(cx, y1, "Play", false, "", w, h);
-button_add(cx, y2, "Options", true, "Comming soon...", w, h);
-button_add(cx, y3, "Quit", false, "", w, h);
 </string>
           </argument>
         </arguments>
@@ -138,32 +124,6 @@ for (var i = 0; i &lt; starCount; i++) {
     starData[| start + STAR_DATA.COLOR] = sColor;
     starData[| start + STAR_DATA.ALPHA] = sAlpha;
     starData[| start + STAR_DATA.DIRECTION] = sDirection;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (Game.DEBUG) {
-    var c = c_white;
-    draw_text_colour(5, 5, "FPS: " + string(floor(fps_real)), c, c, c, c, 1);
 }
 </string>
           </argument>
